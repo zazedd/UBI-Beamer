@@ -1,0 +1,122 @@
+%%% University of Beira Interior, beamer template v1.0
+%%% contact: leomendesantos@gmail.com
+%%% July, 2024
+
+\documentclass{beamer}
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{hyperref, % clickable links
+    graphicx, % include images
+    listings, % for code and formatting
+    caption, % customization of captions in figures and tables
+    stackengine, % custom layouts 
+    amsmath, % math env
+    xcolor, % extend color support
+    multicol, % multiple columns layout
+    booktabs, % high quality tables
+    lipsum % remove it
+}
+
+\usepackage{UU_beamer} % customized style
+
+\def\cmd#1{\texttt{\color{red}\footnotesize $\backslash$#1}}
+\def\env#1{\texttt{\color{blue}\footnotesize #1}}
+
+% ------ CODE COLOR DEFINITION ------ %
+
+\definecolor{codered}{rgb}{0.6,0,0}
+\definecolor{codeblue}{rgb}{0,0,0.8}
+\definecolor{codegreen}{rgb}{0,0.5,0}
+\definecolor{almostwhite}{gray}{0.55}
+\definecolor{codepurple}{rgb}{0.18,0,0.82}
+\definecolor{backcolour}{rgb}{0.125,0.95,0.92}
+
+\lstset{
+    basicstyle=\ttfamily\small,
+    keywordstyle=\bfseries\color{codeblue},
+    emphstyle=\ttfamily\color{codered},   % Custom highlighting style
+    stringstyle=\color{codepurple},
+    numbers=left,
+    numberstyle=\small\color{almostwhite},
+    rulesepcolor=\color{red!20!green!20!blue!20},
+    frame=shadowbox,
+    commentstyle=\color{codegreen},
+    captionpos=b    
+}
+
+% ------------- PRESENTATION INFO --------------- %
+\newcommand{\fullconference}{Full Name of Conference}
+\newcommand{\shortconference}{Short Name of Conference}
+\newcommand{\contact}{\textit{email@xx.uu.se}}
+
+\author[Abv. Author Name]{\href{}{Full Author Name}}
+
+\institute[UBI]{\href{}{Unit Class, Course}}
+\title[Short Title]{Full Title}
+
+\subtitle[\shortconference]{\fullconference}
+\date[Month 20XX]{\small \today}
+
+\begin{document}
+
+% ------------ TITLE SLIDE --------------- %
+{
+% Remove headline and footline from first slide
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
+
+\begin{frame}\label{start}
+  \titlepage
+  \begin{figure}
+    \includegraphics[scale=0.15]{style/logo_ubi_vhorizontalB.jpg}
+  \end{figure}
+\end{frame}
+}
+
+% ---------- TABLE OF CONTENT --------- %
+\begin{frame}{Índice}
+  \tableofcontents[sectionstyle=show, subsectionstyle=show/shaded/hide, subsubsectionstyle=show/shaded/hide]
+\end{frame}
+
+
+\section{Section 2}
+
+\begin{frame}{Frame Example}
+
+  Lorem Ipsum
+
+  \begin{block}{Block Example}
+    \begin{itemize}
+      \pause
+      \item \textbf{Pause 1}
+            \pause
+      \item \textbf{Pause 2}
+            \pause
+      \item \textbf{Pause 3}
+            \pause
+      \item \textbf{Pause 4}
+            \pause
+      \item \textbf{Pause 5}
+    \end{itemize}
+  \end{block}
+
+\end{frame}
+
+
+% --------- REF ------- %
+\section{Referências}
+
+\begin{frame}[allowframebreaks]{Referências}
+
+  \hyperlink{start}{\beamerreturnbutton{Back to start}}
+  \nocite{numpy}
+  \nocite{scipy}
+  \nocite{plt}
+  \bibliographystyle{IEEEtran}
+  \bibliography{ref}
+
+
+\end{frame}
+
+\end{document}
