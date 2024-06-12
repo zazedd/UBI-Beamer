@@ -1,3 +1,3 @@
 # Beamer Template for UBI
 
-A simple LaTeX template for presentations in University of Beira Interior.
+A simple LaTeX template for presentations in the University of Beira Interior.
